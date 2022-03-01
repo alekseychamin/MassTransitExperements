@@ -103,6 +103,11 @@
             set => _settings.RemoveSubscriptions = value;
         }
 
+        public long MaxMessageSizeInKilobytes
+        {
+            set => _settings.QueueConfigurator.MaxMessageSizeInKilobytes = value;
+        }
+
         public void Subscribe(string topicName, string subscriptionName, Action<ISubscriptionConfigurator> callback)
         {
             _endpointConfiguration.Topology.Consume.Subscribe(topicName, subscriptionName, callback);

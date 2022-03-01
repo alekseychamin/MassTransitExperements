@@ -22,6 +22,11 @@
         int MaxSizeInMegabytes { set; }
 
         /// <summary>
+        /// Sets the maximum size of the message in kb
+        /// </summary>
+        long MaxMessageSizeInKilobytes { set; }
+
+        /// <summary>
         /// Sets the value indicating if this queue requires duplicate detection.
         /// </summary>
         bool RequiresDuplicateDetection { set; }

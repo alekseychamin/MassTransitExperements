@@ -50,6 +50,9 @@
             if (MaxSizeInMB.HasValue)
                 options.MaxSizeInMegabytes = MaxSizeInMB.Value;
 
+            if (MaxMessageSizeInKilobytes.HasValue)
+                options.MaxMessageSizeInKilobytes = MaxMessageSizeInKilobytes.Value;
+
             if (RequiresDuplicateDetection.HasValue)
                 options.RequiresDuplicateDetection = RequiresDuplicateDetection.Value;
 

@@ -36,6 +36,8 @@ namespace MassTransit.Azure.ServiceBus.Core.Topology
         /// </summary>
         long? MaxSizeInMB { set; }
 
+        long? MaxMessageSizeInKilobytes { set; }
+
         /// <summary>
         /// Sets the value indicating if this queue requires duplicate detection.
         /// </summary>

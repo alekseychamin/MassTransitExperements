@@ -117,6 +117,10 @@ namespace MassTransit.Azure.ServiceBus.Core.Topology.Topologies
         {
             set => _topicConfigurator.EnableFilteringMessagesBeforePublishing = value;
         }
+        long? IMessageEntityConfigurator.MaxMessageSizeInKilobytes
+        {
+            set => _topicConfigurator.MaxMessageSizeInKilobytes = value;
+        }
 
         public void Apply(IPublishEndpointBrokerTopologyBuilder builder)
         {
