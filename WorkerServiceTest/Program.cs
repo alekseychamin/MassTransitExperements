@@ -11,8 +11,8 @@ Microsoft.Extensions.Hosting.IHost host = Host.CreateDefaultBuilder(args)
                  x.UsingAzureServiceBus((con, cfg) =>
                  {
                      
-                     //cfg.MaxSizeInMegabytes = 5120;
-                     //cfg.MaxMessageSizeInKilobytes = 1024*3;
+                     cfg.MaxSizeInMegabytes = 5120;
+                     cfg.MaxMessageSizeInKilobytes = 1024*3;
 
                      cfg.Host(context.Configuration.GetConnectionString("ServiceBus"));
                      
