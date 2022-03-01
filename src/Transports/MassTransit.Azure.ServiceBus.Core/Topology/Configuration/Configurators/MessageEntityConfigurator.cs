@@ -35,6 +35,7 @@ namespace MassTransit.Azure.ServiceBus.Core.Topology.Configurators
         public long? MaxSizeInMB { get; set; }
 
         public bool? RequiresDuplicateDetection { get; set; }
+        public long? MaxMessageSizeInKilobytes { get; set; }
 
         public void EnableDuplicateDetection(TimeSpan historyTimeWindow)
         {

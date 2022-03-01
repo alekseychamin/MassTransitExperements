@@ -203,6 +203,10 @@
         {
             set => _settings.MaxAutoRenewDuration = value;
         }
+        public long MaxMessageSizeInKilobytes
+        {
+            set => _queueConfigurator.MaxMessageSizeInKilobytes = value;
+        }
 
         public void EnableDuplicateDetection(TimeSpan historyTimeWindow)
         {
